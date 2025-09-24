@@ -1,7 +1,7 @@
 <?php
 namespace EscolaLms\HeadlessH5P\Repositories\Contracts;
 
-use EscolaLms\Core\Dtos\OrderDto;
+use EscolaLms\HeadlessH5P\Dtos\OrderDto;
 use EscolaLms\HeadlessH5P\Dtos\ContentFilterCriteriaDto;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Collection;

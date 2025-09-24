@@ -2,7 +2,7 @@
 
 namespace EscolaLms\HeadlessH5P\Enums;
 
-use EscolaLms\Core\Enums\BasicEnum;
+use EscolaLms\HeadlessH5P\Enums\BasicEnum;
 
 class ConfigEnum extends BasicEnum
 {

@@ -3,8 +3,8 @@
 namespace EscolaLms\HeadlessH5P\Providers;
 
 use EscolaLms\HeadlessH5P\Enums\ConfigEnum;
-use EscolaLms\Settings\EscolaLmsSettingsServiceProvider;
-use EscolaLms\Settings\Facades\AdministrableConfig;
+use EscolaLms\HeadlessH5P\Settings\EscolaLmsSettingsServiceProvider;
+use EscolaLms\HeadlessH5P\Settings\Facades\AdministrableConfig;
 use Illuminate\Support\ServiceProvider;
 
 class SettingsServiceProvider extends ServiceProvider

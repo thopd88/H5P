@@ -1,6 +1,6 @@
 {
   "name": "thopd/h5p",
-  "description": "Headless H5P Laravel REST API",
+  "description": "Independent Headless H5P Laravel REST API",
   "type": "package",
   "require": {
     "php": ">=7.4",

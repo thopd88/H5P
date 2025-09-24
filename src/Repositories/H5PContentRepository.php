@@ -2,8 +2,8 @@
 
 namespace EscolaLms\HeadlessH5P\Repositories;
 
-use EscolaLms\Core\Dtos\OrderDto;
-use EscolaLms\Core\Repositories\Criteria\Criterion;
+use EscolaLms\HeadlessH5P\Dtos\OrderDto;
+use EscolaLms\HeadlessH5P\Repositories\Criteria\Criterion;
 use EscolaLms\HeadlessH5P\Dtos\ContentFilterCriteriaDto;
 use EscolaLms\HeadlessH5P\Exceptions\H5PException;
 use EscolaLms\HeadlessH5P\Helpers\Helpers;

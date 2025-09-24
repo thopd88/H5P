@@ -2,7 +2,7 @@
 
 namespace EscolaLms\HeadlessH5P\Http\Controllers;
 
-use EscolaLms\Core\Http\Controllers\BaseController;
+use EscolaLms\HeadlessH5P\Http\Controllers\BaseController;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use EscolaLms\HeadlessH5P\Http\Controllers\Swagger\EditorApiSwagger;

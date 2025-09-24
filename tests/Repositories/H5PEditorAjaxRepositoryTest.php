@@ -3,7 +3,7 @@ namespace EscolaLms\HeadlessH5P\Tests\Repositories;
 
 
 use Carbon\Carbon;
-use EscolaLms\Core\Tests\CreatesUsers;
+use EscolaLms\HeadlessH5P\Tests\CreatesUsers;
 use EscolaLms\HeadlessH5P\Models\H5PContent;
 use EscolaLms\HeadlessH5P\Models\H5PContentLibrary;
 use EscolaLms\HeadlessH5P\Models\H5PLibrary;

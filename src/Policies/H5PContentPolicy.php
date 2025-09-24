@@ -2,7 +2,7 @@
 
 namespace EscolaLms\HeadlessH5P\Policies;
 
-use EscolaLms\Core\Models\User;
+use EscolaLms\HeadlessH5P\Models\User;
 use EscolaLms\HeadlessH5P\Enums\H5PPermissionsEnum;
 use EscolaLms\HeadlessH5P\Models\H5PContent;
 use Illuminate\Auth\Access\HandlesAuthorization;

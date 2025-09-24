@@ -2,11 +2,11 @@
 
 namespace EscolaLms\HeadlessH5P\Tests;
 
-use EscolaLms\Core\EscolaLmsServiceProvider;
-use EscolaLms\Core\Models\User;
+use EscolaLms\HeadlessH5P\EscolaLmsServiceProvider;
+use EscolaLms\HeadlessH5P\Models\User;
 use EscolaLms\HeadlessH5P\Database\Seeders\PermissionTableSeeder;
 use EscolaLms\HeadlessH5P\Tests\Models\Client;
-use EscolaLms\Settings\EscolaLmsSettingsServiceProvider;
+use EscolaLms\HeadlessH5P\Settings\EscolaLmsSettingsServiceProvider;
 use GuzzleHttp\Handler\MockHandler;
 use GuzzleHttp\HandlerStack;
 use GuzzleHttp\Psr7\Response;
@@ -15,7 +15,7 @@ use Laravel\Passport\PassportServiceProvider;
 use EscolaLms\HeadlessH5P\HeadlessH5PServiceProvider;
 use Spatie\Permission\PermissionServiceProvider;
 
-class TestCase extends \EscolaLms\Core\Tests\TestCase
+class TestCase extends \EscolaLms\HeadlessH5P\Tests\TestCase
 {
     public $user;
 

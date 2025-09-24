@@ -2,7 +2,7 @@
 
 namespace EscolaLms\HeadlessH5P\Models;
 
-use EscolaLms\Core\Models\Traits\QueryCacheable;
+use EscolaLms\HeadlessH5P\Models\Traits\QueryCacheable;
 use EscolaLms\HeadlessH5P\Database\Factories\H5PContentLibraryFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;

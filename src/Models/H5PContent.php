@@ -2,8 +2,8 @@
 
 namespace EscolaLms\HeadlessH5P\Models;
 
-use EscolaLms\Core\Models\Traits\QueryCacheable;
-use EscolaLms\Core\Models\User;
+use EscolaLms\HeadlessH5P\Models\Traits\QueryCacheable;
+use EscolaLms\HeadlessH5P\Models\User;
 use EscolaLms\HeadlessH5P\Database\Factories\H5PContentFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;

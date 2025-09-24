@@ -4,8 +4,8 @@ namespace EscolaLms\HeadlessH5P\Tests\Feature;
 
 use EscolaLms\HeadlessH5P\Enums\ConfigEnum;
 use EscolaLms\HeadlessH5P\Tests\TestCase;
-use EscolaLms\Settings\Database\Seeders\PermissionTableSeeder;
-use EscolaLms\Settings\EscolaLmsSettingsServiceProvider;
+use EscolaLms\HeadlessH5P\Settings\Database\Seeders\PermissionTableSeeder;
+use EscolaLms\HeadlessH5P\Settings\EscolaLmsSettingsServiceProvider;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Facades\Config;
 

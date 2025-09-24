@@ -2,10 +2,10 @@
 
 namespace EscolaLms\HeadlessH5P\Dtos;
 
-use EscolaLms\Core\Dtos\Contracts\InstantiateFromRequest;
-use EscolaLms\Core\Dtos\CriteriaDto;
-use EscolaLms\Core\Repositories\Criteria\Primitives\EqualCriterion;
-use EscolaLms\Core\Repositories\Criteria\Primitives\LikeCriterion;
+use EscolaLms\HeadlessH5P\Dtos\Contracts\InstantiateFromRequest;
+use EscolaLms\HeadlessH5P\Dtos\CriteriaDto;
+use EscolaLms\HeadlessH5P\Repositories\Criteria\Primitives\EqualCriterion;
+use EscolaLms\HeadlessH5P\Repositories\Criteria\Primitives\LikeCriterion;
 use EscolaLms\HeadlessH5P\Enums\H5PPermissionsEnum;
 use Illuminate\Http\Request;
 use Illuminate\Support\Collection;
