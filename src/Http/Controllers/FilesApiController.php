@@ -2,14 +2,14 @@
 
 namespace EscolaLms\HeadlessH5P\Http\Controllers;
 
-use EscolaLms\Core\Http\Controllers\EscolaLmsBaseController;
+use EscolaLms\Core\Http\Controllers\BaseController;
 use Exception;
 use Illuminate\Http\JsonResponse;
 use EscolaLms\HeadlessH5P\Http\Controllers\Swagger\FilesApiSwagger;
 use EscolaLms\HeadlessH5P\Services\Contracts\HeadlessH5PServiceContract;
 use EscolaLms\HeadlessH5P\Http\Requests\FilesStoreRequest;
 
-class FilesApiController extends EscolaLmsBaseController implements FilesApiSwagger
+class FilesApiController extends BaseController implements FilesApiSwagger
 {
     private HeadlessH5PServiceContract $hh5pService;
 

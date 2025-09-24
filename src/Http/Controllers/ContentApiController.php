@@ -3,7 +3,7 @@
 namespace EscolaLms\HeadlessH5P\Http\Controllers;
 
 use EscolaLms\Core\Dtos\OrderDto;
-use EscolaLms\Core\Http\Controllers\EscolaLmsBaseController;
+use EscolaLms\Core\Http\Controllers\BaseController;
 use EscolaLms\HeadlessH5P\Dtos\ContentFilterCriteriaDto;
 use EscolaLms\HeadlessH5P\Http\Controllers\Swagger\ContentApiSwagger;
 use EscolaLms\HeadlessH5P\Http\Requests\ContentCreateRequest;
@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\Storage;
 use Symfony\Component\HttpFoundation\BinaryFileResponse;
 use Symfony\Component\HttpFoundation\StreamedResponse;
 
-class ContentApiController extends EscolaLmsBaseController implements ContentApiSwagger
+class ContentApiController extends BaseController implements ContentApiSwagger
 {
     private HeadlessH5PServiceContract $hh5pService;
     private H5PContentRepositoryContract $contentRepository;

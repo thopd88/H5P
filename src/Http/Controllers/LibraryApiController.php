@@ -2,7 +2,7 @@
 
 namespace EscolaLms\HeadlessH5P\Http\Controllers;
 
-use EscolaLms\Core\Http\Controllers\EscolaLmsBaseController;
+use EscolaLms\Core\Http\Controllers\BaseController;
 use EscolaLms\HeadlessH5P\Http\Requests\LibraryDeleteRequest;
 use EscolaLms\HeadlessH5P\Http\Requests\LibraryFilterRequest;
 use EscolaLms\HeadlessH5P\Http\Requests\LibraryInstallRequest;
@@ -16,7 +16,7 @@ use EscolaLms\HeadlessH5P\Services\Contracts\HeadlessH5PServiceContract;
 use EscolaLms\HeadlessH5P\Http\Requests\LibraryStoreRequest;
 use Illuminate\Http\Request;
 
-class LibraryApiController extends EscolaLmsBaseController implements LibraryApiSwagger
+class LibraryApiController extends BaseController implements LibraryApiSwagger
 {
     private HeadlessH5PServiceContract $hh5pService;
 
