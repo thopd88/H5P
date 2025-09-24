@@ -19,7 +19,7 @@ class H5PFileStorageRepository extends H5PDefaultStorage implements H5PFileStora
 
     function __construct($path, $altEditorPath = null) {
         parent::__construct($path, $altEditorPath);
-        $this->path = $path;
+        $this->path = $path ?? storage_path('app/h5p');
         $this->altEditorPath = $altEditorPath;
     }
 
