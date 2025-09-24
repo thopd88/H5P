@@ -64,7 +64,7 @@ class StorageH5PLinkCommand extends Command
     {
         return[
             Storage::path('h5p-core') => base_path().'/vendor/h5p/h5p-core',
-            Storage::path('h5p-editor') => base_path().'/vendor/h5p/h5p-editor',
+            Storage::path('h5p-editor') => base_path().'/vendor/thopd/h5p-editor',
         ];
     }
 }
