@@ -18,7 +18,7 @@ class FilesApiController extends BaseController implements FilesApiSwagger
         $this->hh5pService = $hh5pService;
     }
 
-    public function __invoke(FilesStoreRequest $request, String $nonce = null): JsonResponse
+    public function __invoke(FilesStoreRequest $request, ?string $nonce = null): JsonResponse
     {
         try {
             $result = $this->hh5pService->uploadFile(

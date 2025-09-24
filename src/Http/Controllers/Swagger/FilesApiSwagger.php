@@ -87,5 +87,5 @@ interface FilesApiSwagger
      * )
      */
 
-    public function __invoke(FilesStoreRequest $request, string $nonce = null): JsonResponse;
+    public function __invoke(FilesStoreRequest $request, ?string $nonce = null): JsonResponse;
 }
