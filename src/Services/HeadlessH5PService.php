@@ -864,9 +864,9 @@ class HeadlessH5PService implements HeadlessH5PServiceContract
                 env('AWS_URL') . '/h5p-core',
             ];
         }
-        $h5pEditorDir = file_exists(__DIR__ . '/../../vendor/h5p/h5p-editor')
-            ? __DIR__ . '/../../vendor/h5p/h5p-editor'
-            : __DIR__ . '/../../../../../vendor/h5p/h5p-editor';
+        $h5pEditorDir = file_exists(__DIR__ . '/../../vendor/thopd/h5p-editor')
+            ? __DIR__ . '/../../vendor/thopd/h5p-editor'
+            : __DIR__ . '/../../../../../vendor/thopd/h5p-editor';
         $h5pCoreDir = file_exists(__DIR__ . '/../../vendor/h5p/h5p-core')
             ? __DIR__ . '/../../vendor/h5p/h5p-core'
             : __DIR__ . '/../../../../../vendor/h5p/h5p-core';
