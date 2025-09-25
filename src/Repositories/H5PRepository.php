@@ -1408,4 +1408,13 @@ class H5PRepository implements H5PFrameworkInterface
 
         return $semanticsFile;
     }
+
+    /**
+     * Reset hub organization data
+     */
+    public function resetHubOrganizationData()
+    {
+        // Implementation for resetting hub organization data
+        // This method is required by H5PFrameworkInterface but can be empty for basic functionality
+    }
 }
