@@ -21,6 +21,9 @@ class H5PFileStorageRepository extends H5PDefaultStorage implements H5PFileStora
         parent::__construct($path, $altEditorPath);
         $this->path = $path ?? storage_path('app/h5p');
         $this->altEditorPath = $altEditorPath;
+
+        // Ensure the H5P storage directory exists
+        $this->isDirReady($this->path);
     }
 
     public function saveLibrary($library)
@@ -106,6 +109,18 @@ class H5PFileStorageRepository extends H5PDefaultStorage implements H5PFileStora
 
     private function isDirReady($path): bool
     {
+        // Handle absolute paths by creating directories directly
+        if (str_starts_with($path, '/')) {
+            if (!is_dir($path)) {
+                if (!mkdir($path, 0755, true) && !is_dir($path)) {
+                    trigger_error('Unable to create directory ' . $path, E_USER_WARNING);
+                    return false;
+                }
+            }
+            return is_dir($path);
+        }
+
+        // Handle relative paths through Storage facade
         if (!Storage::exists($path)) {
             $parent = preg_replace("/\/[^\/]+\/?$/", '', $path);
             if ($parent !== $path && $parent !== '/' && $parent !== '' && !$this->isDirReady($parent)) {

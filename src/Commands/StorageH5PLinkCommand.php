@@ -36,18 +36,23 @@ class StorageH5PLinkCommand extends Command
         $links = $this->links();
 
         foreach ($links as $link => $target) {
-            if (!$overwrite) {
-                if (Storage::directoryExists($link)) {
-                    try {
-                        Storage::assertDirectoryEmpty($link);
-                    } catch (ExpectationFailedException $e) {
-                        $this->error("The [$link] link already exists.");
-                        continue;
-                    }
-                }
+            if (!$overwrite && (is_link($link) || file_exists($link))) {
+                $this->error("The [$link] link already exists.");
+                continue;
             }
 
-            app(H5PFileStorageRepository::class, ['path' => env('AWS_URL')])->copyVendorFiles($target, $link);
+            // Remove existing link/directory
+            if (is_link($link)) {
+                unlink($link);
+            } elseif (is_dir($link)) {
+                rmdir($link);
+            }
+
+            // Create symbolic link
+            if (!symlink($target, $link)) {
+                $this->error("Failed to create symbolic link from [$link] to [$target].");
+                continue;
+            }
 
             $this->info("The [$link] link has been connected to [$target].");
         }
@@ -63,8 +68,9 @@ class StorageH5PLinkCommand extends Command
     protected function links()
     {
         return[
-            Storage::path('h5p-core') => base_path().'/vendor/h5p/h5p-core',
-            Storage::path('h5p-editor') => base_path().'/vendor/thopd/h5p-editor',
+            public_path('h5p') => storage_path('app/h5p'),
+            public_path('h5p-core') => base_path().'/vendor/h5p/h5p-core',
+            public_path('h5p-editor') => base_path().'/vendor/thopd/h5p-editor',
         ];
     }
 }
